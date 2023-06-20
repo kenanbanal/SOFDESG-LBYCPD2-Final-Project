@@ -1,0 +1,15 @@
+CREATE DATABASE BorrowingSystem;
+
+USE BorrowingSystem;
+
+CREATE TABLE Records (StudentID INT Auto_increment PRIMARY KEY, FirstName VARCHAR(50), LastName VARCHAR(50), UserName VARCHAR(50), email VARCHAR(50), passWord VARCHAR(50), isAdmin BOOLEAN);
+
+//DEPRECATED, see new table
+CREATE TABLE BorrowingsTable (RequestID INT Auto_Increment PRIMARY KEY, ItemName VARCHAR(50), Quantity INT, RequestDate VARCHAR(50), Remarks VARCHAR(50)); 
+
+CREATE TABLE ItemsTable (ItemID INT, ItemName VARCHAR(50), Quantity INT);
+
+CREATE TABLE LoginCreds (UserName VARCHAR(50), passWord VARCHAR(50), isAdmin BOOLEAN, StudentID INT);
+
+Newly merged BorrowingsTable
+CREATE TABLE BorrowingsTable (RequestID INT Auto_Increment PRIMARY KEY, ItemName VARCHAR(50), ItemQuantity INT, RequestDate VARCHAR(50), ReturnedDate VARCHAR(50), Remarks VARCHAR(50));
